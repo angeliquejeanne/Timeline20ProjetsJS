@@ -1,0 +1,260 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+html {
+    font-family: 'Jost', sans-serif;
+}
+body {
+    background: black;
+    width: 100%;
+    height: 100vh;
+}
+header h1{
+    text-align: center;
+    padding: 170px 0 120px;
+    color: snow;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+header p{
+    text-align: center;
+    padding: 100px 0 290px;
+    color: snow;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+header span{
+    text-align: center;
+    padding: 100px 0 0;
+    color: snow;
+    font-size: 1.1rem;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+.box-timeline {
+    width: 100%;
+    height: 6846px;
+    background: snow;
+    position: relative;
+    padding: 80px 0 250px 0;
+    margin-bottom: 100px;
+}
+
+.ligne {
+    height: 6446px;
+    width: 8px;
+    margin: 0 auto;
+    background: red;
+}
+
+.rond {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    border: 1px solid #000;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+/* 1000 - 160 + 80 / 3 =~ 306 */
+.r0{top:20px;}
+.r1{top: 326px;}
+.r2{top: 632px;}
+.r3{top: 938px;}
+.r4{top: 1244px;}
+.r5{top: 1550px;}
+.r6{top: 1856px;}
+.r7{top: 2162px;}
+.r8{top: 2468px;}
+.r9{top: 2774px;}
+.r10{top: 3080px;}
+.r11{top: 3386px;}
+.r12{top: 3692px;}
+.r13{top: 3998px;}
+.r14{top: 4304px;}
+.r15{top: 4610px;}
+.r16{top: 4916px;}
+.r17{top: 5222px;}
+.r18{top: 5528px;}
+.r19{top: 5834px;}
+.r20{top: 6140px;}
+.r21{top: 6446px;}
+
+.box {
+    color: snow;
+    width: 400px;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 3px;
+    height: auto;
+    background: rgba(59, 59, 59, 0.6);
+    border: 3px solid red;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%); 
+    transition: all .2s ease-in-out;
+    line-height: 1.5;
+}
+.box p {
+    text-align: center;
+    padding: 20px 0 30px;
+    color: snow;
+}
+.right:hover{
+    transform: scale(1.1)!important;
+    z-index: 1;
+    background: rgb(59, 59, 59);
+}
+.left:hover{
+    transform: translate(-100%) scale(1.1)!important;
+    z-index: 1;
+    background: rgb(59, 59, 59);
+}
+.b0 {
+    top:20px;
+    left: calc(50% - 270px);
+}
+.b1 {
+    top: 326px;
+    left: calc(50% + 270px);
+}  
+.b2 {
+    top: 632px;
+    left: calc(50% - 270px);
+}
+.b3 {
+    top: 938px;
+    left: calc(50% + 270px);
+}
+.b4 {
+    top: 1244px;
+    left: calc(50% - 270px);
+}
+.b5 {
+    top: 1550px;
+    left: calc(50% + 270px);
+}
+.b6 {
+    top: 1856px;
+    left: calc(50% - 270px);
+}
+.b7 {
+    top: 2162px;
+    left: calc(50% + 270px);
+}
+.b8 {
+    top: 2468px;
+    left: calc(50% - 270px);
+}
+.b9 {
+    top: 2774px;
+    left: calc(50% + 270px);
+}
+.b10 {
+    top: 3080px;
+    left: calc(50% - 270px);
+}
+.b11 {
+    top: 3386px;
+    left: calc(50% + 270px);
+}
+.b12 {
+    top: 3692px;
+    left: calc(50% - 270px);
+}
+.b13 {
+    top: 3998px;
+    left: calc(50% + 270px);
+}
+.b14 {
+    top: 4304px;
+    left: calc(50% - 270px);
+}
+.b15 {
+    top: 4610px;
+    left: calc(50% + 270px);
+}
+.b16 {
+    top: 4916px;
+    left: calc(50% - 270px);
+}
+.b17 {
+    top: 5222px;
+    left: calc(50% + 270px);
+}
+.b18 {
+    top: 5528px;
+    left: calc(50% - 270px);
+}
+.b19 {
+    top: 5834px;
+    left: calc(50% + 270px);
+}
+.b20 {
+    top: 6140px;
+    left: calc(50% - 270px);
+}
+.b21 {
+    top: 6446px;
+    left: calc(50% + 270px);
+    opacity: 1;
+}
+
+.box h2 {
+    line-height: 20px;
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px 0 10px ;
+    color: snow;
+}
+.box p {
+    line-height: 20px;
+    font-size: 1.3rem;
+    margin: 10px 0 20px 0;
+    color: snow;
+}
+.btn {
+    display: block;
+    background: red;
+    padding: 10px;
+    width: 140px;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+.btn:hover {
+    background-color: snow;
+    color: red;
+}
+@media screen and (max-width: 1000px) {
+
+    .ligne {
+        position: relative;
+        left: 200px;
+    }
+    .rond {
+        left: calc(50% + 200px);
+    }
+    .box {
+        left: calc(50% - 50px)
+    }
+
+}
