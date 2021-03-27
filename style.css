@@ -14,34 +14,69 @@ body {
     width: 100%;
     height: 100vh;
 }
-header h1{
-    text-align: center;
-    padding: 170px 0 120px;
-    color: snow;
-    font-size: 3rem;
-    line-height: 1.2;
-}
-header p{
-    text-align: center;
-    padding: 100px 0 290px;
-    color: snow;
-    font-size: 1.5rem;
-    line-height: 1.2;
-}
-header span{
-    text-align: center;
-    padding: 100px 0 0;
-    color: snow;
-    font-size: 1.1rem;
-}
 header{
     width: 100%;
     height: 100vh;
     text-align: center;
 }
+header h1{
+    margin: 170px auto 120px;
+    color: snow;
+    font-size: 2.9rem;
+    line-height: 1.2;
+    width: 720px;
+    
+}
+header p{
+    margin: 100px auto 290px;
+    color: snow;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    width: 500px;
+}
+header span{
+    margin: 100px auto 0;
+    color: snow;
+    font-size: 1.1rem;
+    width: 400px;
+}
+.cursor {
+  box-sizing: content-box;
+  z-index: 1000;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 33% 67% 35% 65% / 32% 68% 27% 73%;
+  border: 2px solid snow;
+  animation: borderAnimate 4s ease-in-out infinite alternate;
+  pointer-events: none;
+  transition: transform 0.4s ease-in-out;
+}
+.hovered {
+  background-size: cover;
+  transform: scale(3);
+}
+@keyframes borderAnimate {
+    0% {
+      border-radius: 32% 68% 27% 73% / 66% 59% 41% 34%;
+    }
+    25% {
+        border-radius: 46% 54% 27% 73% / 63% 65% 35% 37% ;
+    }
+    50% {
+        border-radius: 74% 26% 39% 61% / 63% 53% 47% 37% ;
+    }
+    75% {
+        border-radius: 52% 48% 81% 19% / 51% 75% 25% 49% ;
+    }
+    100% {
+      border-radius: 59% 41% 37% 63% / 44% 33% 67% 56%;
+    }
+}
+
 .box-timeline {
     width: 100%;
-    height: 6846px;
+    height: 6900px;
     background: snow;
     position: relative;
     padding: 80px 0 250px 0;
@@ -70,28 +105,72 @@ header{
     font-size: 40px;
 }
 /* 1000 - 160 + 80 / 3 =~ 306 */
-.r0{top:20px;}
-.r1{top: 326px;}
-.r2{top: 632px;}
-.r3{top: 938px;}
-.r4{top: 1244px;}
-.r5{top: 1550px;}
-.r6{top: 1856px;}
-.r7{top: 2162px;}
-.r8{top: 2468px;}
-.r9{top: 2774px;}
-.r10{top: 3080px;}
-.r11{top: 3386px;}
-.r12{top: 3692px;}
-.r13{top: 3998px;}
-.r14{top: 4304px;}
-.r15{top: 4610px;}
-.r16{top: 4916px;}
-.r17{top: 5222px;}
-.r18{top: 5528px;}
-.r19{top: 5834px;}
-.r20{top: 6140px;}
-.r21{top: 6446px;}
+.r0 {
+    top:20px;
+}
+.r1 {
+    top: 326px;
+}
+.r2 {
+    top: 632px;
+}
+.r3 {
+    top: 938px;
+}
+.r4 {
+    top: 1244px;
+}
+.r5 {
+    top: 1550px;
+}
+.r6 {
+    top: 1856px;
+}
+.r7 {
+    top: 2162px;
+}
+.r8 {
+    top: 2468px;
+}
+.r9 {
+    top: 2774px;
+}
+.r10 {
+    top: 3080px;
+}
+.r11 {
+    top: 3386px;
+}
+.r12 {
+    top: 3692px;
+}
+.r13 {
+    top: 3998px;
+}
+.r14 {
+    top: 4304px;
+}
+.r15 {
+    top: 4610px;
+}
+.r16 {
+    top: 4916px;
+}
+.r17 {
+    top: 5222px;
+}
+.r18 {
+    top: 5528px
+}
+.r19 {
+    top: 5834px;
+}
+.r20 {
+    top: 6140px;
+}
+.r21 {
+    top: 6446px;
+}
 
 .box {
     color: snow;
@@ -108,11 +187,6 @@ header{
     transform: translate(-50%); 
     transition: all .2s ease-in-out;
     line-height: 1.5;
-}
-.box p {
-    text-align: center;
-    padding: 20px 0 30px;
-    color: snow;
 }
 .right:hover{
     transform: scale(1.1)!important;
@@ -225,7 +299,9 @@ header{
     line-height: 20px;
     font-size: 1.3rem;
     margin: 10px 0 20px 0;
+    padding: 20px 0 30px;
     color: snow;
+    text-align: center;
 }
 .btn {
     display: block;
@@ -244,17 +320,197 @@ header{
     background-color: snow;
     color: red;
 }
-@media screen and (max-width: 1000px) {
 
+
+
+
+@media screen and (max-width: 900px) {
     .ligne {
         position: relative;
-        left: 200px;
+        left: 100px;
     }
     .rond {
-        left: calc(50% + 200px);
+        left: calc(50% + 100px);
     }
     .box {
         left: calc(50% - 50px)
     }
-
+}
+@media (min-width: 320px) and (max-width:475px){
+    header h1 {
+        font-size: 1.6rem!important;
+        width:300px;
+        margin: 80px auto;
+        padding: 0;
+    }
+    header p{
+        margin: 100px auto 90px;
+        font-size: 1.2rem;
+        width: 300px;
+    }
+    header span{
+        margin: 100px auto 0;
+        color: snow;
+        font-size: 1.1rem;
+        width: 400px;
+    }
+    .cursor {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+    }
+    .hovered {
+        background-size: cover;
+        transform: scale(1.5);
+    }
+    .box-timeline {
+        width: 100%;
+        height: 6846px;
+        background: snow;
+        position: relative;
+        padding: 80px 0 50px 0;
+        margin-bottom: 100px;
+    }
+    .box {
+        width: 200px!important;
+        left: 35%!important;
+        height: 280px!important;
+    }
+    .box h2 {
+        font-size: 1rem!important;
+    } 
+    .box p {
+        font-size: 1rem!important;
+        margin: 5px 0 10px 0!important;
+        padding: 5px 0 5px!important;
+    }
+    .btn {
+        padding: 5px!important;
+        width: 120px!important;
+        font-size: 1rem!important;
+        margin-top: 2px!important;
+    }
+    .b0 {
+        top:20px;
+        left: calc(50% - 50px)!important;
+    }
+    .right:hover, .left:hover {
+        transform: translate(0) scale(1.1)!important;
+    }
+}
+@media (min-width: 475px) and (max-width:768px){
+    header h1 {
+        font-size: 2rem;
+        width:450px;
+        margin: 80px auto;
+        padding: 0;
+    }
+    header p{
+        margin: 100px auto 90px;
+        font-size: 1.4rem;
+        width: 450px;
+    }
+    header span{
+        margin: 100px auto 0;
+        color: snow;
+        font-size: 1.1rem;
+        width: 400px;
+    }
+    .cursor {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+    }
+    .hovered {
+        background-size: cover;
+        transform: scale(1.8);
+    }
+    .box {
+        width: 250px!important;
+        left: 35%!important;
+        height: 300px!important;
+    }
+    .box h2 {
+        font-size: 1.2rem!important;
+        margin: 5px 0 10px 0!important;
+    } 
+    .box p {
+        font-size: 1.1rem!important;
+        margin: 5px 0 50px 0!important;
+        padding: 5px 0 5px!important;
+    }
+    .btn {
+        padding: 5px!important;
+        width: 130px!important;
+        font-size: 1.1rem!important;
+        margin-top: 2px!important;
+    }
+    .right:hover, .left:hover {
+        transform: translate(0) scale(1.1)!important;
+    }
+}
+@media (min-width: 768px) and (max-width:900px){
+    header h1 {
+        font-size: 2rem;
+        width:450px;
+        margin: 80px auto;
+        padding: 0;
+    }
+    header p{
+        margin: 100px auto 90px;
+        font-size: 1.4rem;
+        width: 450px;
+    }
+    header span{
+        margin: 100px auto 0;
+        color: snow;
+        font-size: 1.1rem;
+        width: 400px;
+    }
+    .cursor {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+    }
+    .hovered {
+        background-size: cover;
+        transform: scale(1.8);
+    }
+    .box {
+        width: 290px!important;
+        left: 35%!important;
+        height: 300px!important;
+    }
+    .box h2 {
+        font-size: 1.4rem!important;
+        margin: 5px 0 10px 0!important;
+    } 
+    .box p {
+        font-size: 1.2rem!important;
+        margin: 5px 0 50px 0!important;
+        padding: 5px 0 5px!important;
+    }
+    .btn {
+        padding: 5px!important;
+        width: 130px!important;
+        font-size: 1.1rem!important;
+        margin-top: 2px!important;
+    }
+    .right:hover, .left:hover {
+        transform: translate(0) scale(1.1)!important;
+    }
+}
+@media (min-width:900px) and (max-width:1024px) {
+    .box {
+        width: 300px!important;
+    }
+    .box h2 {
+        font-size: 1.5rem!important;
+    } 
+    .box p {
+        font-size: 1.2rem!important;
+    }
+    .btn {
+        font-size: 1.1rem!important;
+    }
 }
